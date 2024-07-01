@@ -12,7 +12,7 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <li
               key={index}
-              className="flex-1 flex my-3 text-white hover:text-[#cb15d5] transition-colors duration-300 px-10 border-r-2 last:border-none border-gray-300">
+              className="flex-1 flex my-3 text-white hover:text-purple-primary transition-colors duration-300 px-10 border-r-2 last:border-none border-gray-300">
               <a href={item.link} className="font-medium text-base flex-1">
                 {item.name}
               </a>

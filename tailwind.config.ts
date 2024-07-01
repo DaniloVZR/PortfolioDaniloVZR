@@ -19,9 +19,15 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        purple: {
+          primary: "#b936c0"
+        }
+      },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 50%, rgba(0,0,0,1) 100%)',
       },
+
     },
   },
   plugins: [

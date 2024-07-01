@@ -7,7 +7,7 @@ export default function Home() {
     <div className="relative bg-custom-gradient flex flex-col justify-center items-center ">
       <Navbar />
       <Hero />
-      <main className="mx-auto px-5 md:px-[10rem]">
+      <main className="px-[8rem] md:px-[12rem] xl:px-[15rem]">
         <About />
       </main>
     </div>
