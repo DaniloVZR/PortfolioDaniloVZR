@@ -2,6 +2,7 @@
 import { navItems } from "@/constants";
 import { Button } from "./ui/MovingBorder";
 import { useState } from "react";
+import { RiMenuFill } from "react-icons/ri";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = () => {
               className={`md:hidden px-5 py-2`}
               onClick={handleMenu}
             >
-              Menu
+              <RiMenuFill size="1.2rem" />
             </div>
           )
 
