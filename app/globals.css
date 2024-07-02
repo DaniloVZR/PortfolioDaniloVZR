@@ -7,3 +7,13 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+.purple__gradient {
+  background: rgb(213, 18, 206);
+  filter: blur(800px);
+}
+
+.white__gradient {
+  background: rgba(50, 98, 255, 0.729);
+  filter: blur(700px);
+}
