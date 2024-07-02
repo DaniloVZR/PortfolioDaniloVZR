@@ -17,7 +17,12 @@
   filter: blur(800px);
 }
 
-.white__gradient {
+.blue__gradient {
   background: rgba(50, 98, 255, 0.729);
-  filter: blur(700px);
+  filter: blur(500px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.3);
+  filter: blur(750px);
 }
