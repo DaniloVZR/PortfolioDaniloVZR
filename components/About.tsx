@@ -6,7 +6,7 @@ const About = () => {
       <h1 className="heading tracking-normal w-auto p-10">About<span className="text-purple-primary">{' '}Me</span></h1>
       <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-8 items-center">
         <div className="flex-1 relative my-10">
-          <div className="relative text-center font-normal z-10 cursor-default md:text-left space-y-5 xl:space-y-0 xl:grid xl:grid-cols-2 xl:items-start xl:gap-[4rem]">
+          <div className="relative text-center font-normal z-10 cursor-default md:text-left space-y-5 2xl:space-y-0 2xl:grid 2xl:grid-cols-2 xl:items-start xl:gap-[4rem]">
             {textAboutMe.map((paragraph, index) => (
               <div key={index} className="flex flex-col md:flex-row justify-start items-center z-10 relative rounded-lg">
                 <span
