@@ -1,9 +1,7 @@
-import { text } from "stream/consumers";
-
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
+  { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -23,5 +21,24 @@ export const textAboutMe = [
   {
     emoji: "😉",
     text: "I consider myself to have valuable soft skills for web development, such as the ability to work in a team, solve problems, learn quickly, and pay attention to detail. I am also a proactive, adaptable person with a strong interest in collaborating with organizational goals and ensuring excellence in every project."
+  }
+]
+
+export const textExperience = [
+  {
+    title: "GTD Colombia",
+    job: "Systems Auxiliary",
+    text: [
+      "Configuración y mantenimiento de equipos.",
+      "Manejo de inventario de equipos.",
+      "Manejo de herramientas ofimáticas, Sistema AX, MySQL Query, Active Directory.",
+      "Administración de usuarios en directorios activos.",
+      "Soporte y mantenimiento de aplicaciones."
+    ]
+  },
+  {
+    title: "Freelance Project - Fademet",
+    job: "Frontend Developer",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur similique minus adipisci quo, accusamus tempore nisi perferendis sunt quos nesciunt libero voluptates eum labore, maiores, cumque molestias et officiis?"
   }
 ]
