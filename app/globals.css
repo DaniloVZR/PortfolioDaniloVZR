@@ -8,6 +8,10 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .purple__gradient {
   background: rgb(213, 18, 206);
   filter: blur(800px);

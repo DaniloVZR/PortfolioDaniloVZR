@@ -26,6 +26,7 @@ const config = {
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 50%, rgba(0,0,0,1) 100%)',
+        'gradient-card': 'linear-gradient(90deg, rgba(3,2,14,1) 0%, rgba(59,46,78,0.6993172268907564) 100%)'
       },
 
     },

@@ -5,17 +5,17 @@ const About = () => {
   return (
     <section id="about" className="pt-10 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal w-auto p-10">About<span className="text-purple-primary">{' '}Me</span></h1>
-      <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-8 items-center py-[5rem] border-b-2 border-slate-800">
+      <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-8 items-center md:py-[5rem] border-b-2 border-slate-800">
         <div className="flex-1 relative">
-          <div className="relative text-lg font-normal space-y-5 z-10 cursor-default">
+          <div className="relative text-center md:text-left font-normal space-y-14 md:space-y-5 z-10 cursor-default my-[5rem] first:my-[2rem]">
             {textAboutMe.map((paragraph, index) => (
-              <div key={index} className="flex justify-center items-center z-10 relative">
+              <div key={index} className="flex flex-col md:flex-row justify-center items-center z-10 relative md:py-2 rounded-lg">
                 <span
-                  className="mr-5 p-4 rounded-full text-2xl ease-in-out hover:scale-125 duration-300 "
+                  className="md:mr-5 p-4 rounded-full text-xl md:text-2xl ease-in-out hover:scale-125 duration-300 "
                   style={{
                     background: "rgb(0, 0, 0, 0.5)"
                   }}>{paragraph.emoji}</span>
-                <p>{paragraph.text}</p>
+                <p className="hover:bg-gradient-card backdrop-blur-lg p-3 rounded-lg only:text-base md:text-lg mt-5 md:mt-auto">{paragraph.text}</p>
               </div>
             ))}
           </div>
