@@ -19,13 +19,14 @@ const Navbar = () => {
       >
         <ul className="hidden md:flex justify-center items-center w-full">
           {navItems.map((item, index) => (
-            <li
+            <a
               key={index}
+              href={item.link}
               className="flex-1 flex my-3 text-white hover:text-purple-primary transition-colors duration-300 px-10 border-r-2 last:border-none border-gray-300">
-              <a href={item.link} className="font-medium text-base flex-1">
+              <li className="font-medium text-base flex-1">
                 {item.name}
-              </a>
-            </li>
+              </li>
+            </a>
           ))}
         </ul>
 

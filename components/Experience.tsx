@@ -9,8 +9,8 @@ const Experience = () => {
       </h1>
       <div className="flex flex-col xl:grid grid-cols-2 gap-10 my-10">
         {
-          textExperience.map((experience) => (
-            <div className="w-full relative group">
+          textExperience.map((experience, index) => (
+            <div className="w-full relative group" key={index}>
               <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-purple-primary transform scale-[0.80] rounded-lg blur-2xl transition-all duration-300 group-hover:blur-3xl" />
               <div className="w-full relative bg-gray-primary border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-start">
                 <h1 className="text-xl font-bold rounded-lg mb-2">

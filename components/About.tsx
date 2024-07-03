@@ -19,14 +19,10 @@ const About = () => {
             ))}
           </div>
           <div className="absolute z-0 left-[-50%] top-0 w-[70%] h-[60%] rounded-full purple__gradient" />
-          <div className="absolute z-0 left-[-50%] -bottom-0 w-[70%] h-[60%] rounded-full white__gradient" />
+          <div className="absolute z-0 left-[-50%] bottom-0 w-[70%] h-[60%] rounded-full white__gradient" />
           <div className="absolute z-0 right-[-50%] top-0 w-[70%] h-[60%] rounded-full blue__gradient" />
           <div className="absolute z-0 right-[-50%] bottom-0 w-[70%] h-[60%] rounded-full white__gradient" />
         </div>
-
-        {/* <div className="hidden md:flex flex-1 justify-center items-center">
-          <ProfilePicture />
-        </div> */}
       </div>
     </section >
   );
