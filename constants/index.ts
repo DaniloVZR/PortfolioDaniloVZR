@@ -42,3 +42,21 @@ export const textExperience = [
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur similique minus adipisci quo, accusamus tempore nisi perferendis sunt quos nesciunt libero voluptates eum labore, maiores, cumque molestias et officiis?"
   }
 ]
+
+export const projects = [
+  {
+    id: "1",
+    image: "/PortfolioImages/QuioscoApp_01.webp",
+    title: "Quiosco Coffee"
+  },
+  {
+    id: "2",
+    image: "/PortfolioImages/QuioscoApp_02.webp",
+    title: "Quiosco Coffee"
+  },
+  {
+    id: "3",
+    image: "/PortfolioImages/QuioscoApp_03.webp",
+    title: "Quiosco Coffee"
+  }
+]

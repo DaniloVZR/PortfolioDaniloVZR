@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <main className="px-[4rem] md:px-[12rem] xl:px-[15rem]">
         <About />
         <Experience />
+        <Projects />
       </main>
-    </div>
+    </div >
   );
 }

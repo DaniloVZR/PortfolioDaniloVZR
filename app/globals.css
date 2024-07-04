@@ -26,3 +26,8 @@
   background: rgba(255, 255, 255, 0.3);
   filter: blur(750px);
 }
+
+.project-card.darken {
+  filter: brightness(55%);
+  /* Oscurece la card cuando no está en hover */
+}

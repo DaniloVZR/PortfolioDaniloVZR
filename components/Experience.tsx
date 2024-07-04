@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-10 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal w-auto p-10">
-        Exper<span className="text-purple-primary">ience</span>
+        Experience
       </h1>
       <div className="flex flex-col xl:grid grid-cols-2 gap-10 my-10">
         {
@@ -38,7 +38,7 @@ const Experience = () => {
           ))
         }
       </div>
-    </section>
+    </section >
 
 
   );
