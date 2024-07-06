@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Experience", link: "#experience" },
@@ -46,17 +48,36 @@ export const textExperience = [
 export const projects = [
   {
     id: "1",
-    image: "/PortfolioImages/QuioscoApp_01.webp",
-    title: "Quiosco Coffee"
+    image: "/PortfolioImages/Fademet.webp",
+    title: "Fademet",
+    link: "https://fademet.vercel.app",
+    gitLink: "https://github.com/DaniloVZR/Fademet-Vite"
   },
   {
     id: "2",
-    image: "/PortfolioImages/QuioscoApp_02.webp",
-    title: "Quiosco Coffee"
+    image: "/PortfolioImages/PlanificadorDeGastos.webp",
+    title: "Planificador de Gastos",
+    link: "https://admirable-kulfi-3fc4cf.netlify.app",
+    gitLink: "https://github.com/DaniloVZR/Control-Gastos"
   },
   {
     id: "3",
-    image: "/PortfolioImages/QuioscoApp_03.webp",
-    title: "Quiosco Coffee"
-  }
+    image: "/PortfolioImages/Encriptador.webp",
+    title: "Encriptador",
+    link: "https://desencriptador-ms.netlify.app",
+    gitLink: "https://github.com/DaniloVZR/Encriptador"
+  },
+  {
+    id: "4",
+    image: "/PortfolioImages/GuitarLA.webp",
+    title: "GuitarLA",
+    link: "https://guitar-la-next-1r3eu7c5k-danilovzr.vercel.app",
+    gitLink: "https://github.com/DaniloVZR/GuitarLA_Next"
+  },
+  {
+    id: "5",
+    image: "/PortfolioImages/QuioscoApp.webp",
+    title: "Quiosco App",
+    gitLink: "https://github.com/DaniloVZR/QuioscoApp_Deploy"
+  },
 ]

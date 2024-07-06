@@ -16,12 +16,12 @@ const Projects = () => {
   };
 
   return (
-    <section id="experience" className="py-10 border-t-2 border-slate-800">
+    <section id="projects" className="py-10 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal p-10">
         Projects
       </h1>
       <div className="my-10">
-        <div className="grid md:grid-cols-2 2xl:grid-cols-3 gap-[2rem]">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 2xl:grid-cols-3 gap-[2rem]">
           {
             projects.map((project) => (
               <div
@@ -34,6 +34,8 @@ const Projects = () => {
                 <ProjectCard
                   image={project.image}
                   title={project.title}
+                  link={project.link}
+                  gitLink={project.gitLink}
                 />
               </div>
             ))

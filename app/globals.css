@@ -31,3 +31,28 @@
   filter: brightness(55%);
   /* Oscurece la card cuando no está en hover */
 }
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(213, 18, 206);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.icon-container:hover::before {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+}
