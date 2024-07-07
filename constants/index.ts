@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { title } from "process";
 
 export const navItems = [
   { name: "About", link: "#about" },
@@ -51,33 +51,74 @@ export const projects = [
     image: "/PortfolioImages/Fademet.webp",
     title: "Fademet",
     link: "https://fademet.vercel.app",
-    gitLink: "https://github.com/DaniloVZR/Fademet-Vite"
+    gitLink: "https://github.com/DaniloVZR/Fademet-Vite",
+    stack: ["react", "javascript", "css"]
   },
   {
     id: "2",
     image: "/PortfolioImages/PlanificadorDeGastos.webp",
     title: "Planificador de Gastos",
     link: "https://admirable-kulfi-3fc4cf.netlify.app",
-    gitLink: "https://github.com/DaniloVZR/Control-Gastos"
+    gitLink: "https://github.com/DaniloVZR/Control-Gastos",
+    stack: ["react", "javascript", "css"]
   },
   {
     id: "3",
     image: "/PortfolioImages/Encriptador.webp",
     title: "Encriptador",
     link: "https://desencriptador-ms.netlify.app",
-    gitLink: "https://github.com/DaniloVZR/Encriptador"
+    gitLink: "https://github.com/DaniloVZR/Encriptador",
+    stack: ["react", "javascript", "css"]
   },
   {
     id: "4",
     image: "/PortfolioImages/GuitarLA.webp",
     title: "GuitarLA",
     link: "https://guitar-la-next-1r3eu7c5k-danilovzr.vercel.app",
-    gitLink: "https://github.com/DaniloVZR/GuitarLA_Next"
+    gitLink: "https://github.com/DaniloVZR/GuitarLA_Next",
+    stack: ["react", "javascript", "css", "nextjs"]
   },
   {
     id: "5",
     image: "/PortfolioImages/QuioscoApp.webp",
     title: "Quiosco App",
-    gitLink: "https://github.com/DaniloVZR/QuioscoApp_Deploy"
+    gitLink: "https://github.com/DaniloVZR/QuioscoApp_Deploy",
+    stack: ["react", "javascript", "css"]
   },
 ]
+
+export const techStack = [
+  {
+    title: "Languages",
+    items: [
+      { id: "javascript", name: "JavaScript" },
+      { id: "typescript", name: "TypeScript" },
+      { id: "cpp", name: "C++" },
+      { id: "csharp", name: "C#" }
+    ]
+  },
+  {
+    title: "Frontend",
+    items: [
+      { id: "html", name: "HTML" },
+      { id: "css", name: "CSS" },
+      { id: "tailwind", name: "TailwindCSS" },
+      { id: "sass", name: "SASS" },
+      { id: "react", name: "React" },
+      { id: "nextjs", name: "Next.js" },
+      { id: "redux", name: "Redux" },
+      { id: "framer", name: "Framer" }
+    ]
+  },
+  {
+    title: "Backend",
+    items: [
+      { id: "nodejs", name: "NodeJS" },
+      { id: "express", name: "ExpressJS" },
+      { id: "mysql", name: "MySQL" },
+      { id: "postgresql", name: "PostgreSQL" },
+      { id: "mongodb", name: "MongoDB" },
+      { id: "sequelize", name: "Sequelize" }
+    ]
+  }
+];

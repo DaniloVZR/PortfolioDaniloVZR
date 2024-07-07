@@ -5,12 +5,14 @@ const ProjectCard = ({
   image,
   title,
   link,
-  gitLink
+  gitLink,
+  stack
 }: {
   image: string;
   title: string;
   link?: string;
   gitLink: string;
+  stack: string[];
 }) => {
   return (
     <div className="bg-gray-primary border border-gray-800 rounded-2xl flex flex-col hover:scale-110 duration-300">
@@ -25,7 +27,20 @@ const ProjectCard = ({
       </div>
       <div className="p-4">
         <h1 className="mb-4 text-2xl">{title}</h1>
-        <p className="mb-2 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, sunt.</p>
+        <div>
+          <ul className="flex items-center gap-2">
+            {stack.map((stackItem) => (
+              <li className="rounded-full" key={stackItem}>
+                <img
+                  src={`TechStack/${stackItem}-icon.svg`}
+                  alt=""
+                  width={28}
+                  height={28}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="flex gap-1">
           <div className="icon-container">
             <a href={gitLink} target="_blank">

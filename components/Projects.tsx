@@ -36,6 +36,7 @@ const Projects = () => {
                   title={project.title}
                   link={project.link}
                   gitLink={project.gitLink}
+                  stack={project.stack}
                 />
               </div>
             ))
