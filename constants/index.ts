@@ -41,7 +41,9 @@ export const textExperience = [
   {
     title: "Freelance Project - Fademet",
     job: "Frontend Developer",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur similique minus adipisci quo, accusamus tempore nisi perferendis sunt quos nesciunt libero voluptates eum labore, maiores, cumque molestias et officiis?"
+    text: [
+      "Desarrollo de una landing page para un cliente dedicado al sector de metalmecánica. La página está diseñada para mostrar el trabajo del cliente, destacando sus servicios y productos, con un enfoque en la usabilidad y la experiencia del usuario.",
+      "Se utilizaron tecnologías como React, SwiperJS, Aos y EmailJS."]
   }
 ]
 
@@ -52,7 +54,8 @@ export const projects = [
     title: "Fademet",
     link: "https://fademet.vercel.app",
     gitLink: "https://github.com/DaniloVZR/Fademet-Vite",
-    stack: ["react", "javascript", "css"]
+    desc: "Landing Page para Fademet, empresa de metalmecánica de Medellín. La página web cuenta con distintas animaciones, galería y formulario de contacto.",
+    stack: ["React", "Javascript", "Module CSS", "Aos", "EmailJS", "SwiperJS"]
   },
   {
     id: "2",
@@ -60,6 +63,7 @@ export const projects = [
     title: "Planificador de Gastos",
     link: "https://admirable-kulfi-3fc4cf.netlify.app",
     gitLink: "https://github.com/DaniloVZR/Control-Gastos",
+    desc: ".",
     stack: ["react", "javascript", "css"]
   },
   {
@@ -68,6 +72,7 @@ export const projects = [
     title: "Encriptador",
     link: "https://desencriptador-ms.netlify.app",
     gitLink: "https://github.com/DaniloVZR/Encriptador",
+    desc: ".",
     stack: ["react", "javascript", "css"]
   },
   {
@@ -76,6 +81,7 @@ export const projects = [
     title: "GuitarLA",
     link: "https://guitar-la-next-1r3eu7c5k-danilovzr.vercel.app",
     gitLink: "https://github.com/DaniloVZR/GuitarLA_Next",
+    desc: ".",
     stack: ["react", "javascript", "css", "nextjs"]
   },
   {
@@ -83,6 +89,7 @@ export const projects = [
     image: "/PortfolioImages/QuioscoApp.webp",
     title: "Quiosco App",
     gitLink: "https://github.com/DaniloVZR/QuioscoApp_Deploy",
+    desc: ".",
     stack: ["react", "javascript", "css"]
   },
 ]

@@ -61,7 +61,6 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-bottom: 2rem;
 }
 
 .pagination li {
@@ -76,8 +75,12 @@
   color: white;
 }
 
+.pagination li a:hover {
+  background-color: rgba(101, 101, 101, 0.5);
+}
+
 .pagination li.active a {
-  background-color: rgba(5, 5, 5, 5);
-  color: white;
+  background-color: white;
+  color: rgba(5, 5, 5, 5);
   border: 1px solid gray;
 }

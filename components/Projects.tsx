@@ -8,7 +8,7 @@ const Projects = () => {
   const [hovered, setHovered] = useState<string | null>(null);
   const [itemOffset, setItemOffset] = useState(0);
 
-  const itemsPerPage = 2;
+  const itemsPerPage = 3;
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = projects.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(projects.length / itemsPerPage);
@@ -43,7 +43,7 @@ const Projects = () => {
           containerClassName={"pagination"}
           activeClassName={"active"}
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col my-10">
           {
             currentItems.map((project) => (
               <div
@@ -59,6 +59,7 @@ const Projects = () => {
                   link={project.link}
                   gitLink={project.gitLink}
                   stack={project.stack}
+                  desc={project.desc}
                 />
               </div>
             ))
