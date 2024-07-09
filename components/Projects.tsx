@@ -2,10 +2,21 @@
 import { projects } from "@/constants";
 import ProjectCard from "./ui/ProjectCard";
 import { useState } from "react";
+import ReactPaginate from "react-paginate";
 
 const Projects = () => {
-
   const [hovered, setHovered] = useState<string | null>(null);
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const itemsPerPage = 2;
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = projects.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(projects.length / itemsPerPage);
+
+  const handlePageClick = (event: { selected: number }) => {
+    const newOffset = (event.selected * itemsPerPage) % projects.length;
+    setItemOffset(newOffset);
+  };
 
   const handleCardHover = (projectId: string) => {
     setHovered(projectId);
@@ -21,14 +32,25 @@ const Projects = () => {
         Projects
       </h1>
       <div className="my-10">
-        <div className="flex flex-col xl:grid xl:grid-cols-2 2xl:grid-cols-3 gap-[2rem]">
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel=">"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="<"
+          renderOnZeroPageCount={null}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+        />
+        <div className="flex flex-col">
           {
-            projects.map((project) => (
+            currentItems.map((project) => (
               <div
                 key={project.id}
                 onMouseEnter={() => handleCardHover(project.id)}
                 onMouseLeave={handleCardLeave}
-                className={`relative project-card ${hovered && hovered !== project.id ? "brightness-50" : ""
+                className={`relative project-card mb-16 ${hovered && hovered !== project.id ? "brightness-50" : ""
                   } transition duration-300 ease-in-out`}
               >
                 <ProjectCard

@@ -5,7 +5,7 @@ const Stack = () => {
   return (
     <section id="Stack" className="py-10 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal p-10">
-        Stack
+        Technologies
       </h1>
       <div className="relative flex justify-center items-center my-10">
         <div className="relative flex flex-col 2xl:grid 2xl:grid-cols-3 gap-[4rem] w-full">

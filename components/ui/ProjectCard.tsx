@@ -15,33 +15,34 @@ const ProjectCard = ({
   stack: string[];
 }) => {
   return (
-    <div className="bg-gray-primary border border-gray-800 rounded-2xl flex flex-col hover:scale-110 duration-300">
+    <div className="rounded-2xl flex justify-between">
       <div className="m-3">
         <Image
           src={image}
-          width={800}
-          height={800}
+          width={400}
+          height={400}
           alt="Image"
-          className="rounded-2xl h-auto xl:h-[220px]"
+          className="rounded-xl h-auto"
         />
       </div>
-      <div className="p-4">
-        <h1 className="mb-4 text-2xl">{title}</h1>
+      <div className="flex flex-col items-end">
+        <h1 className="mb-4 text-2xl flex-1">{title}</h1>
         <div>
           <ul className="flex items-center gap-2">
             {stack.map((stackItem) => (
-              <li className="rounded-full" key={stackItem}>
-                <img
+              <li key={stackItem}>
+                {/* <img
                   src={`TechStack/${stackItem}-icon.svg`}
                   alt=""
                   width={28}
                   height={28}
-                />
+                /> */}
+                <span className="text-slate-200 font-bold bg-purple-primary p-1.5 rounded-xl">{stackItem}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-1 mt-5">
           <div className="icon-container">
             <a href={gitLink} target="_blank">
               <RiGithubFill size="2rem" />
