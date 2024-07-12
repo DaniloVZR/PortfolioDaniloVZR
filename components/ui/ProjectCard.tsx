@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { RiGithubFill, RiLinksFill } from "react-icons/ri";
 import AceternityButton from "./AceternityButton";
-import { isArray } from "util";
 
 const ProjectCard = ({
   image,
@@ -15,7 +14,7 @@ const ProjectCard = ({
   title: string;
   link?: string;
   gitLink: string;
-  desc: string;
+  desc: string | string[];
   stack: string[];
 }) => {
   return (
