@@ -55,7 +55,7 @@ export const projects = [
     link: "https://fademet.vercel.app",
     gitLink: "https://github.com/DaniloVZR/Fademet-Vite",
     desc: "Landing Page para Fademet, empresa de metalmecánica de Medellín. La página web cuenta con distintas animaciones, galería y formulario de contacto.",
-    stack: ["React", "Javascript", "Module CSS", "Aos", "EmailJS", "SwiperJS"]
+    stack: ["React", "Javascript", "Module CSS", "Aos", "EmailJS", "SwiperJS", "Vite"]
   },
   {
     id: "2",
@@ -63,8 +63,10 @@ export const projects = [
     title: "Planificador de Gastos",
     link: "https://admirable-kulfi-3fc4cf.netlify.app",
     gitLink: "https://github.com/DaniloVZR/Control-Gastos",
-    desc: ".",
-    stack: ["react", "javascript", "css"]
+    desc: [
+      'Aplicación web planificadora de gastos con local storage, con funcionalidades como definir un presupuesto y ver datos como el dinero disponible y el dinero total gastado; además de poder agregar y filtrar los gastos, como también editarlos o eliminarlos. Créditos al curso de React de Juan de la Torre.',
+      'Créditos: Este proyecto fue desarrollado como parte del curso de React impartido por Juan de la Torre en Udemy. He realizado modificaciones adicionales para personalizar y mejorar el proyecto.'],
+    stack: ["React", "Javascript", "CSS", "Vite"]
   },
   {
     id: "3",
@@ -72,8 +74,8 @@ export const projects = [
     title: "Encriptador",
     link: "https://desencriptador-ms.netlify.app",
     gitLink: "https://github.com/DaniloVZR/Encriptador",
-    desc: ".",
-    stack: ["react", "javascript", "css"]
+    desc: "Aplicación web con la funcionalidad de encriptar o desencriptar un mensaje de texto según el tipo de encriptamiento que se le ordene. Destacar que este fue un pequeño proyecto para la universidad.",
+    stack: ["React", "Javascript", "CSS", "Vite"]
   },
   {
     id: "4",
@@ -81,16 +83,19 @@ export const projects = [
     title: "GuitarLA",
     link: "https://guitar-la-next-1r3eu7c5k-danilovzr.vercel.app",
     gitLink: "https://github.com/DaniloVZR/GuitarLA_Next",
-    desc: ".",
-    stack: ["react", "javascript", "css", "nextjs"]
+    desc: [
+      'Página web de venta de guitarras y blog de música, con funciones de carrito con local storage y uso de Strapi como CMS.', 'Créditos: Este proyecto fue desarrollado como parte del curso de React impartido por Juan de la Torre en Udemy. He realizado modificaciones adicionales para personalizar y mejorar el proyecto.'],
+    stack: ["React", "Javascript", "Module CSS", "NextJS", "Strapi"]
   },
   {
     id: "5",
     image: "/PortfolioImages/QuioscoApp.webp",
     title: "Quiosco App",
     gitLink: "https://github.com/DaniloVZR/QuioscoApp_Deploy",
-    desc: ".",
-    stack: ["react", "javascript", "css"]
+    desc: [
+      'Página web para restaurante con un menú interactivo con las opciones del restaurante. Los clientes pueden seleccionar los productos que deseen comprar y ver un resumen de su pedido, además el sistema cuenta con una sección para administradores para gestionar las órdenes.',
+      'Créditos: Este proyecto fue desarrollado como parte del curso de React impartido por Juan de la Torre en Udemy. He realizado modificaciones adicionales para personalizar y mejorar el proyecto.'],
+    stack: ["React", "NextJS", "Javascript", "Typescript", "TailwindCSS", "SWR", "Prisma", "UseContext", "NodeJS"]
   },
 ]
 

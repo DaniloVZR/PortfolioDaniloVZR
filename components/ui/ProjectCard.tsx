@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { RiGithubFill, RiLinksFill } from "react-icons/ri";
 import AceternityButton from "./AceternityButton";
+import { isArray } from "util";
 
 const ProjectCard = ({
   image,
@@ -18,39 +19,49 @@ const ProjectCard = ({
   stack: string[];
 }) => {
   return (
-    <div className="rounded-2xl block md:flex md:justify-between">
-      <div className="mb-5">
+    <div className="flex flex-col xl:flex-row xl:gap-8">
+      <div className="flex-shrink-0 mb-4 xl:mb-0 xl:mr-4 xl:w-1/2">
         <Image
           src={image}
-          width={400}
-          height={400}
-          alt="Image"
-          className="rounded-xl h-auto"
+          width={1000}
+          height={1000}
+          alt={title}
+          className="rounded-lg object-cover h-auto w-full"
         />
       </div>
-      <div className="flex flex-col md:items-end">
-        <h1 className="mb-4 text-2xl flex-1">{title}</h1>
+      <div className="flex flex-col justify-between xl:w-1/2">
         <div>
-          <p>{desc}</p>
-          <ul className="flex items-center gap-2">
+          <h1 className="text-2xl font-bold mb-4">{title}</h1>
+          <div className="text-gray-400">
+            {
+              Array.isArray(desc) ? desc.map((d, i) =>
+                <p key={i} className="mb-4">{d}</p>)
+                : <p className="mb-4">{desc}</p>
+            }
+          </div>
+          <ul className="flex flex-wrap gap-2">
             {stack.map((stackItem) => (
               <li key={stackItem}>
-                <span className="text-slate-200 font-bold text-xs bg-slate-800 p-1.5 rounded-xl">{stackItem}</span>
+                <span className="text-slate-200 font-bold text-xs bg-slate-800 p-1.5 rounded-lg">
+                  {stackItem}
+                </span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex gap-1 mt-5">
-          <a href={gitLink} target="_blank">
+        <div className="flex gap-2 mt-4">
+          <a href={gitLink} target="_blank" className="flex-grow">
             <AceternityButton
+              className="w-full"
               text="Ver código"
               icon={<RiGithubFill size="2rem" />}
             />
           </a>
           {
             link && (
-              <a href={link} target="_blank">
+              <a href={link} target="_blank" className="flex-grow">
                 <AceternityButton
+                  className="w-full"
                   text="Ver Web"
                   icon={<RiLinksFill size="2rem" />}
                 />
