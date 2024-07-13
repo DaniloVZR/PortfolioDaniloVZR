@@ -26,6 +26,7 @@ const ProjectCard = ({
           height={1000}
           alt={title}
           className="rounded-lg object-cover h-auto w-full"
+          priority
         />
       </div>
       <div className="flex flex-col justify-between xl:w-1/2">

@@ -10,14 +10,14 @@ const Stack = () => {
       <div className="relative flex justify-center items-center my-10">
         <div className="relative flex flex-col 2xl:grid 2xl:grid-cols-3 gap-[4rem] w-full">
           {techStack.map((stack) => (
-            <div className="relative flex-1 border border-gray-800 py-8 px-10 rounded-2xl z-1" key={stack.title}>
+            <div className="relative flex-1 border border-gray-800 py-8 px-10 rounded-2xl z-1 hover:border-gray-400 duration-300" key={stack.title}>
               <div className="relative z-10">
-                <h1 className="text-2xl font-bold text-center m-5">{stack.title}</h1>
-                <ul className="grid justify-center mt-8 gap-5 grid-cols-3  2xl:gap-10 2xl:mt-16 place-items-center">
+                <h1 className="text-2xl font-bold text-center">{stack.title}</h1>
+                <ul className="grid justify-center mt-8 gap-5 grid-cols-3 xl:gap-10 xl:mt-10 place-items-center">
                   {stack.items.map((item) => (
                     <li className="flex flex-col h-max gap-3 justify-normal items-center" key={item.id}>
                       <img
-                        className="w-[40px] h-[40px] md:w-[60px] md:h-[60px]"
+                        className="w-[40px] h-[40px]"
                         src={`TechStack/${item.id}-icon.svg`}
                         alt={item.id}
                       />

@@ -3,6 +3,7 @@ import { projects } from "@/constants";
 import ProjectCard from "./ui/ProjectCard";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
+import Loader from "./ui/Loader";
 
 const Projects = () => {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -45,25 +46,26 @@ const Projects = () => {
         />
         <div className="flex flex-col my-10">
           {
-            currentItems.map((project) => (
-              <div
-                key={project.id}
-                onMouseEnter={() => handleCardHover(project.id)}
-                onMouseLeave={handleCardLeave}
-                className={`relative project-card mb-16 ${hovered && hovered !== project.id ? "brightness-50" : ""
-                  } transition duration-300 ease-in-out`}
-              >
-                <ProjectCard
-                  image={project.image}
-                  title={project.title}
-                  link={project.link}
-                  gitLink={project.gitLink}
-                  stack={project.stack}
-                  desc={project.desc}
-                />
-              </div>
-            ))
-          }
+            currentItems.length ? (
+              currentItems.map((project) => (
+                <div
+                  key={project.id}
+                  onMouseEnter={() => handleCardHover(project.id)}
+                  onMouseLeave={handleCardLeave}
+                  className={`relative project-card mb-16 ${hovered && hovered !== project.id ? "brightness-50" : ""
+                    } transition duration-300 ease-in-out`}
+                >
+                  <ProjectCard
+                    image={project.image}
+                    title={project.title}
+                    link={project.link}
+                    gitLink={project.gitLink}
+                    stack={project.stack}
+                    desc={project.desc}
+                  />
+                </div>
+              ))
+            ) : <Loader />}
         </div>
       </div>
     </section>

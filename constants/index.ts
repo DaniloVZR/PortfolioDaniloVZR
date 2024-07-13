@@ -103,10 +103,10 @@ export const techStack = [
   {
     title: "Languages",
     items: [
-      { id: "javascript", name: "JavaScript" },
-      { id: "typescript", name: "TypeScript" },
+      { id: "csharp", name: "C#" },
       { id: "cpp", name: "C++" },
-      { id: "csharp", name: "C#" }
+      { id: "javascript", name: "Javascript" },
+      { id: "typescript", name: "Typescript" }
     ]
   },
   {
