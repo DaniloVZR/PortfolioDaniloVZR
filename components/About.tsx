@@ -2,7 +2,7 @@ import { textAboutMe } from "@/constants";
 
 const About = () => {
   return (
-    <section id="about" className="py-10 border-t-2 border-slate-800">
+    <section id="about" className="py-16 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal w-auto p-10">About{' '}<span className="text-purple-primary">Me</span></h1>
       <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-8 items-center">
         <div className="flex-1 relative my-10">

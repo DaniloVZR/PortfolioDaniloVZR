@@ -28,7 +28,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-10 border-t-2 border-slate-800">
+    <section id="projects" className="py-16 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal p-10">
         Projects
       </h1>

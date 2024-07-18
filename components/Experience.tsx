@@ -3,7 +3,7 @@ import { Meteors } from "./ui/MeteorsCard";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-10 border-t-2 border-slate-800">
+    <section id="experience" className="py-16 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal w-auto p-10">
         Experience
       </h1>

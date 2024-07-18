@@ -1,4 +1,5 @@
-import { title } from "process";
+import { IconType } from 'react-icons';
+import { RiGithubFill, RiLinkedinFill, RiTwitterXFill } from 'react-icons/ri';
 
 export const navItems = [
   { name: "About", link: "#about" },
@@ -134,3 +135,15 @@ export const techStack = [
     ]
   }
 ];
+
+interface SocialMediaItem {
+  id: string;
+  icon: IconType;
+  link: string;
+}
+
+export const socialMedia: SocialMediaItem[] = [
+  { id: "github", icon: RiGithubFill, link: "https://github.com/DaniloVZR" },
+  { id: "twitterX", icon: RiTwitterXFill, link: "https://x.com/DaniloVZR_" },
+  { id: "linkedin", icon: RiLinkedinFill, link: "https://www.linkedin.com/in/joimar-danilo-urrego-david/" },
+]

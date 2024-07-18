@@ -3,7 +3,7 @@ import { DotBg } from "./ui/DotBg";
 
 const Stack = () => {
   return (
-    <section id="Stack" className="py-10 border-t-2 border-slate-800">
+    <section id="Stack" className="pt-16 pb-28 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal p-10">
         Technologies
       </h1>

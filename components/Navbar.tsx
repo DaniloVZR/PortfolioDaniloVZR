@@ -17,6 +17,7 @@ const Navbar = () => {
         duration={4000}
         borderRadius="1rem"
       >
+        {/* Arreglar li dentro de ul */}
         <ul className="hidden md:flex justify-center items-center w-full">
           {navItems.map((item, index) => (
             <a
