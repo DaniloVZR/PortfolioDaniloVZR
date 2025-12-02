@@ -45,17 +45,13 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="pr-4">
-            <LanguageSwitcher />
-          </div>
         </div>
 
         {/* Mobile Menu */}
         <div className="md:hidden">
           {menu ? (
             <div className="py-2">
-              <div className="flex justify-between items-center px-6 pb-3 border-b border-slate-700">
-                <LanguageSwitcher />
+              <div className="px-6 pb-2 border-b border-slate-700">
                 <button
                   onClick={handleMenu}
                   className="text-purple-primary hover:text-white transition-colors"
@@ -75,6 +71,9 @@ const Navbar = () => {
                     </a>
                   </li>
                 ))}
+                <div className="px-4 pt-2 border-t border-slate-700">
+                  <LanguageSwitcher />
+                </div>
               </ul>
             </div>
           ) : (
@@ -84,9 +83,7 @@ const Navbar = () => {
             >
               <div className="flex items-center gap-2">
                 <RiMenuFill size="1.2rem" />
-                <span className="text-sm font-medium">{t('nav.menu')}</span>
               </div>
-              <LanguageSwitcher />
             </div>
           )}
         </div>

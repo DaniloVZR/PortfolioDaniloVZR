@@ -67,7 +67,6 @@ const translations = {
       experience: "Experience",
       projects: "Projects",
       contact: "Contact",
-      menu: "Menu",
       close: "Close"
     },
     hero: {
