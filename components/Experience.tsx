@@ -1,11 +1,16 @@
+"use client";
 import { textExperience } from "@/constants";
 import { Meteors } from "./ui/MeteorsCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Experience = () => {
+
+  const { t } = useLanguage();
+
   return (
     <section id="experience" className="py-12 sm:py-16 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal w-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10 text-3xl sm:text-4xl lg:text-5xl">
-        Experience
+        {t('experience.title')}
       </h1>
       <div className="flex flex-col xl:grid xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 my-6 sm:my-8 lg:my-10 px-4 sm:px-6">
         {

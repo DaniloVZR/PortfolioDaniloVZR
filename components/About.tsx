@@ -1,35 +1,39 @@
 "use client";
 import { motion } from "framer-motion";
 import { RiCodeSSlashLine, RiLightbulbFlashLine, RiTeamLine, RiRocketLine } from "react-icons/ri";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+
+  const { t } = useLanguage();
+
   const stats = [
-    { number: "1+", label: "Year Experience" },
-    { number: "10+", label: "Projects Completed" },
-    { number: "B2", label: "English Level" },
-    { number: "100%", label: "Dedication" }
+    { number: "1+", label: t('about.stats.experience') },
+    { number: "10+", label: t('about.stats.projects') },
+    { number: "B2", label: t('about.stats.english') },
+    { number: "100%", label: t('about.stats.dedication') }
   ];
 
   const highlights = [
     {
       icon: RiCodeSSlashLine,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code following best practices"
+      title: t('about.highlights.cleanCode.title'),
+      description: t('about.highlights.cleanCode.description')
     },
     {
       icon: RiLightbulbFlashLine,
-      title: "Problem Solver",
-      description: "Quick learner with strong analytical and creative thinking"
+      title: t('about.highlights.problemSolver.title'),
+      description: t('about.highlights.problemSolver.description')
     },
     {
       icon: RiTeamLine,
-      title: "Team Player",
-      description: "Excellent collaboration and communication skills"
+      title: t('about.highlights.teamPlayer.title'),
+      description: t('about.highlights.teamPlayer.description')
     },
     {
       icon: RiRocketLine,
-      title: "Fast Learner",
-      description: "Always eager to learn new technologies and improve"
+      title: t('about.highlights.fastLearner.title'),
+      description: t('about.highlights.fastLearner.description')
     }
   ];
 
@@ -47,10 +51,10 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h1 className="heading tracking-normal w-auto px-10 pb-6">
-            About <span className="text-purple-primary">Me</span>
+            {t('about.title')} <span className="text-purple-primary">{t('about.me')}</span>
           </h1>
           <p className="text-center text-gray-400 max-w-2xl mx-auto px-4 mb-16">
-            Passionate Frontend Developer seeking to create impactful web experiences
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -91,35 +95,30 @@ const About = () => {
               <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <span className="text-3xl">👋</span>
-                  Hello there!
+                  {t('about.hello.title')}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  I am a passionate and committed Frontend Web Developer seeking my first job
-                  as a developer. Currently focused on training through the SoyHenry programming
-                  bootcamp, oriented towards web development.
+                  {t('about.hello.description')}
                 </p>
               </div>
 
               <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <span className="text-3xl">💼</span>
-                  Experience
+                  {t('about.experience.title')}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  One year of experience in the IT sector as a Systems Assistant, which has
-                  provided me with a solid technical foundation. Professional degree in
-                  Information Systems Programming from Politécnico Jaime Isaza Cadavid.
+                  {t('about.experience.description')}
                 </p>
               </div>
 
               <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <span className="text-3xl">🌟</span>
-                  Certifications
+                  {t('about.certifications.title')}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  B2 English certificate with 600 hours of study at Comfama, demonstrating
-                  strong communication skills in international environments.
+                  {t('about.certifications.description')}
                 </p>
               </div>
             </motion.div>
@@ -161,15 +160,15 @@ const About = () => {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-purple-primary to-pink-600 rounded-xl p-8 text-center"
               >
-                <h3 className="text-2xl font-bold mb-3">Let&apos;s Work Together!</h3>
+                <h3 className="text-2xl font-bold mb-3">{t('about.cta.title')}</h3>
                 <p className="text-white/90 mb-6">
-                  I&apos;m ready to contribute to your team and take your projects to the next level
+                  {t('about.cta.description')}
                 </p>
                 <a
                   href="#contact"
                   className="inline-block px-8 py-3 bg-white text-purple-primary font-semibold rounded-lg hover:bg-gray-100 transition-all hover:scale-105"
                 >
-                  Get In Touch
+                  {t('about.cta.button')}
                 </a>
               </motion.div>
             </motion.div>

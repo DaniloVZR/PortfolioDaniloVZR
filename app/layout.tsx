@@ -2,12 +2,22 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { LanguageProvider } from "../contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio - DaniloVZR",
   description: "Portfolio Danilo Urrego",
+  keywords: ["developer", "portfolio", "react", "javascript", "programming", "danilo urrego"],
+  authors: [{ name: "Danilo Urrego David" }],
+  openGraph: {
+    title: "Portfolio - DaniloVZR",
+    description: "Portfolio Danilo Urrego - Frontend Developer",
+    type: "website",
+    locale: "en_US",
+    alternateLocale: "es_ES",
+  }
 };
 
 export default function RootLayout({
@@ -24,7 +34,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

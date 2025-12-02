@@ -1,12 +1,17 @@
+"use client";
 import { techStack } from "@/constants";
 import { DotBg } from "./ui/DotBg";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Stack = () => {
+
+  const { t } = useLanguage();
+
   return (
     <section id="Stack" className="pt-12 sm:pt-16 pb-20 sm:pb-28 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10 text-3xl sm:text-4xl lg:text-5xl">
-        Technologies
+        {t('stack.title')}
       </h1>
       <div className="relative flex justify-center items-center my-6 sm:my-8 lg:my-10 px-4 sm:px-6">
         <div className="relative flex flex-col lg:grid lg:grid-cols-2 2xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full max-w-7xl">

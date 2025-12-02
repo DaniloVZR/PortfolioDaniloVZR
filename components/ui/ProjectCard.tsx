@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { RiGithubFill, RiLinksFill } from "react-icons/ri";
 import AceternityButton from "./AceternityButton";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProjectCard = ({
   image,
@@ -17,6 +18,9 @@ const ProjectCard = ({
   desc: string | string[];
   stack: string[];
 }) => {
+
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-col xl:flex-row xl:gap-8">
       <div className="flex-shrink-0 mb-4 xl:mb-0 xl:mr-4 xl:w-1/2">
@@ -53,7 +57,7 @@ const ProjectCard = ({
           <a href={gitLink} target="_blank" className="flex-grow">
             <AceternityButton
               className="w-full"
-              text="Ver código"
+              text={t('projects.viewCode')}
               icon={<RiGithubFill size="2rem" />}
             />
           </a>
@@ -62,7 +66,7 @@ const ProjectCard = ({
               <a href={link} target="_blank" className="flex-grow">
                 <AceternityButton
                   className="w-full"
-                  text="Ver Web"
+                  text={t('projects.viewWebsite')}
                   icon={<RiLinksFill size="2rem" />}
                 />
               </a>

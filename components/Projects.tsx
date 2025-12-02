@@ -4,8 +4,10 @@ import ProjectCard from "./ui/ProjectCard";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import Loader from "./ui/Loader";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
   const [hovered, setHovered] = useState<string | null>(null);
   const [itemOffset, setItemOffset] = useState(0);
 
@@ -30,7 +32,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal p-10">
-        Projects
+        {t('projects.title')}
       </h1>
       <div className="my-10">
         <ReactPaginate

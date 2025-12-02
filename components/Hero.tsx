@@ -3,22 +3,21 @@ import { BackgroundBeams } from "./ui/BackgroundBeams";
 import { RiArrowDownLine, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t, language } = useLanguage();
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = [
-    "Frontend Developer",
-    "React Specialist",
-    "UI/UX Enthusiast",
-    "Web Developer"
-  ];
+
+  // Get translated roles
+  const roles = t('hero.roles') as unknown as string[];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [roles.length]);
+  }, [roles.length, language]);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center">
@@ -44,7 +43,7 @@ const Hero = () => {
                 transition={{ delay: 0.2 }}
                 className="text-gray-400 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 uppercase tracking-wider"
               >
-                Welcome to my portfolio
+                {t('hero.welcome')}
               </motion.p>
 
               <motion.h1
@@ -65,7 +64,7 @@ const Hero = () => {
                 className="h-14 sm:h-16 md:h-20 mb-6 sm:mb-8"
               >
                 <motion.h2
-                  key={currentRole}
+                  key={`${currentRole}-${language}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -82,8 +81,7 @@ const Hero = () => {
                 transition={{ delay: 0.8 }}
                 className="text-gray-300 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 px-4 sm:px-0"
               >
-                Passionate about creating amazing web experiences with modern technologies.
-                Let&apos;s build something great together!
+                {t('hero.description')}
               </motion.p>
 
               {/* CTA Buttons */}
@@ -97,7 +95,7 @@ const Hero = () => {
                   href="#projects"
                   className="group relative px-6 sm:px-8 py-2.5 sm:py-3 bg-[#b936c0] text-white font-semibold rounded-lg overflow-hidden transition-all hover:scale-105 text-sm sm:text-base"
                 >
-                  <span className="relative z-10">View My Work</span>
+                  <span className="relative z-10">{t('hero.viewWork')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                 </a>
 
@@ -105,7 +103,7 @@ const Hero = () => {
                   href="#contact"
                   className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-[#b936c0] text-white font-semibold rounded-lg hover:bg-[#b936c0] transition-all hover:scale-105 text-sm sm:text-base"
                 >
-                  Get In Touch
+                  {t('hero.getInTouch')}
                 </a>
               </motion.div>
 
@@ -169,7 +167,7 @@ const Hero = () => {
         className="hidden sm:flex absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
         <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
-          <span className="text-xs sm:text-sm mb-2">Scroll Down</span>
+          <span className="text-xs sm:text-sm mb-2">{t('hero.scrollDown')}</span>
           <RiArrowDownLine className="w-5 h-5 sm:w-6 sm:h-6" />
         </a>
       </motion.div>
