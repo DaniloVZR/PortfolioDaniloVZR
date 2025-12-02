@@ -62,17 +62,17 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <button
+            <div
               onClick={handleMenu}
               className="px-5 py-3 flex items-center justify-center gap-2 text-white hover:text-purple-primary transition-colors w-full"
             >
               <RiMenuFill size="1.2rem" />
               <span className="text-sm font-medium">Menu</span>
-            </button>
+            </div>
           )}
         </div>
       </Button>
-    </nav>
+    </nav >
   );
 };
 

@@ -161,9 +161,9 @@ const About = () => {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-purple-primary to-pink-600 rounded-xl p-8 text-center"
               >
-                <h3 className="text-2xl font-bold mb-3">Let's Work Together!</h3>
+                <h3 className="text-2xl font-bold mb-3">Let&apos;s Work Together!</h3>
                 <p className="text-white/90 mb-6">
-                  I'm ready to contribute to your team and take your projects to the next level
+                  I&apos;m ready to contribute to your team and take your projects to the next level
                 </p>
                 <a
                   href="#contact"

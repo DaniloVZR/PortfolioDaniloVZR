@@ -18,7 +18,7 @@ const Hero = () => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center">
@@ -83,7 +83,7 @@ const Hero = () => {
                 className="text-gray-300 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 px-4 sm:px-0"
               >
                 Passionate about creating amazing web experiences with modern technologies.
-                Let's build something great together!
+                Let&apos;s build something great together!
               </motion.p>
 
               {/* CTA Buttons */}
