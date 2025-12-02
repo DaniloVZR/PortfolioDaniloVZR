@@ -29,7 +29,6 @@
 
 .project-card.darken {
   filter: brightness(55%);
-  /* Oscurece la card cuando no está en hover */
 }
 
 .icon-container {
@@ -57,22 +56,37 @@
   opacity: 1;
 }
 
+/* Pagination Styles - Responsive */
 .pagination {
   display: flex;
   justify-content: center;
   list-style: none;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 1rem 0;
 }
 
 .pagination li {
-  margin: 0 5px;
+  margin: 0;
 }
 
 .pagination li a {
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 0.5rem 0.75rem;
   border: 1px solid #ddd;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: white;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .pagination li a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }
 
 .pagination li a:hover {
@@ -85,18 +99,44 @@
   border: 1px solid gray;
 }
 
-/* HTML: <div class="loader"></div> */
+.pagination li.disabled a {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loader */
 .loader {
-  width: 50px;
+  width: 40px;
+  height: 40px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 8px solid;
+  border: 6px solid;
   border-color: #fff #0000;
   animation: l1 1s infinite;
+}
+
+@media (min-width: 640px) {
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 8px solid;
+    border-color: #fff #0000;
+  }
 }
 
 @keyframes l1 {
   to {
     transform: rotate(.5turn)
   }
+}
+
+/* Smooth scrolling with offset for fixed navbar */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* Better text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

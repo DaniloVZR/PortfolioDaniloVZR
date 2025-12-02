@@ -2,7 +2,7 @@
 import { navItems } from "@/constants";
 import { Button } from "./ui/MovingBorder";
 import { useState } from "react";
-import { RiMenuFill } from "react-icons/ri";
+import { RiMenuFill, RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -11,59 +11,68 @@ const Navbar = () => {
     setMenu(!menu);
   }
 
+  const handleLinkClick = () => {
+    setMenu(false);
+  }
+
   return (
-    <div className="my-1 fixed top-5 z-50">
+    <nav className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-auto max-w-6xl">
       <Button
         duration={4000}
         borderRadius="1rem"
+        className="w-full"
       >
-        {/* Arreglar li dentro de ul */}
-        <ul className="hidden md:flex justify-center items-center w-full">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex justify-center items-center">
           {navItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              className="flex-1 flex my-3 text-white hover:text-purple-primary transition-colors duration-300 px-10 border-r-2 last:border-none border-gray-300">
-              <li className="font-medium text-base flex-1">
+            <li key={index} className="flex-1">
+              <a
+                href={item.link}
+                className="block px-6 lg:px-10 py-3 text-white hover:text-purple-primary transition-colors duration-300 border-r-2 last:border-none border-gray-300 text-sm lg:text-base font-medium text-center"
+              >
                 {item.name}
-              </li>
-            </a>
+              </a>
+            </li>
           ))}
         </ul>
 
-        {
-          menu ? (
-            <div>
-              <ul className="md:flex justify-center items-center w-full pb-3">
+        {/* Mobile Menu */}
+        <div className="md:hidden">
+          {menu ? (
+            <div className="py-2">
+              <ul className="flex flex-col">
                 {navItems.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex-1 flex flex-col my-3 text-white hover:text-purple-primary transition-colors duration-300 px-10">
-                    <a href={item.link} onClick={handleMenu} className="font-medium text-base flex-1">
+                  <li key={index} className="border-b border-slate-700 last:border-none">
+                    <a
+                      href={item.link}
+                      onClick={handleLinkClick}
+                      className="block px-6 py-3 text-white hover:text-purple-primary hover:bg-slate-800/50 transition-colors duration-300 font-medium text-sm"
+                    >
                       {item.name}
                     </a>
                   </li>
                 ))}
-                <div
-                  className="hover:text-purple-primary transition-colors duration-300 font-medium text-base flex-1"
-                  onClick={handleMenu}
-                >
-                  Close
-                </div>
               </ul>
+              <button
+                onClick={handleMenu}
+                className="w-full px-6 py-3 text-purple-primary hover:text-white hover:bg-slate-800/50 transition-colors duration-300 font-medium text-sm flex items-center justify-center gap-2"
+              >
+                <RiCloseLine size="1.2rem" />
+                Close
+              </button>
             </div>
           ) : (
-            <div
-              className={`md:hidden px-5 py-2`}
+            <button
               onClick={handleMenu}
+              className="px-5 py-3 flex items-center justify-center gap-2 text-white hover:text-purple-primary transition-colors w-full"
             >
               <RiMenuFill size="1.2rem" />
-            </div>
-          )
-
-        }
+              <span className="text-sm font-medium">Menu</span>
+            </button>
+          )}
+        </div>
       </Button>
-    </div>
+    </nav>
   );
 };
 

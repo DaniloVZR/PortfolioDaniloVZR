@@ -23,6 +23,7 @@ const config = {
     extend: {
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        "spin-slow": "spin 20s linear infinite",
       },
       keyframes: {
         meteor: {
