@@ -4,6 +4,7 @@ import { RiArrowDownLine, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Image from "next/image";
 
 const Hero = () => {
   const { t, language } = useLanguage();
@@ -27,7 +28,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-0">
+      <div className="relative z-10 w-full px-10 md:px-30 lg:px-44 py-20 sm:py-24 lg:py-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Text Content */}
@@ -41,7 +42,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-gray-400 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 uppercase tracking-wider"
+                className="text-gray-400 text-xs sm:text-sm mb-3 uppercase tracking-wider"
               >
                 {t('hero.welcome')}
               </motion.p>
@@ -50,18 +51,18 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 leading-tight"
+                className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 leading-tight"
               >
                 Danilo Urrego
                 <br />
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">David</span>
+                <span className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl">David</span>
               </motion.h1>
 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="h-14 sm:h-16 md:h-20 mb-6 sm:mb-8"
+                className="h-12 sm:h-14 md:h-16"
               >
                 <motion.h2
                   key={`${currentRole}-${language}`}
@@ -69,7 +70,7 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#b936c0]"
+                  className="text-xl sm:text-2xl md:text-2xl lg:text-2xl 2xl:text-3xl font-extrabold text-[#b936c0]"
                 >
                   {roles[currentRole]}
                 </motion.h2>
@@ -79,7 +80,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="text-gray-300 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 px-4 sm:px-0"
+                className="text-gray-300 text-sm sm:text-base md:text-base lg:text-lg mb-5 sm:mb-6 max-w-xl mx-auto lg:mx-0 px-4 sm:px-0"
               >
                 {t('hero.description')}
               </motion.p>
@@ -120,7 +121,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
                 >
-                  <RiGithubFill className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <RiGithubFill className="w-5 h-5" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/joimar-danilo-urrego-david/"
@@ -128,7 +129,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
                 >
-                  <RiLinkedinFill className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <RiLinkedinFill className="w-5 h-5" />
                 </a>
               </motion.div>
             </motion.div>
@@ -140,7 +141,7 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex justify-center items-center order-1 lg:order-2"
             >
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] xl:max-w-[480px]">
+              <div className="relative w-[180px] sm:w-[220px] md:w-[230px] lg:w-[250px] xl:w-[350px] 2xl:w-[450px]">
                 {/* Gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#b936c0] to-[#4158d0] rounded-full blur-2xl sm:blur-3xl opacity-30 animate-pulse"></div>
 
@@ -150,7 +151,7 @@ const Hero = () => {
                   <img
                     src="/Profile-Picture.png"
                     alt="Danilo Urrego David"
-                    className="w-full h-full rounded-full object-cover p-1 sm:p-2"
+                    className="md:max-w-300 w-full h-full rounded-full object-cover p-1 sm:p-2"
                   />
                 </div>
               </div>

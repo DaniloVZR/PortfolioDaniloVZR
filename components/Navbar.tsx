@@ -4,10 +4,13 @@ import { useState } from "react";
 import { RiMenuFill, RiCloseLine } from "react-icons/ri";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const { t } = useLanguage();
+  const [showNavbar, setShowNavbar] = useState(false);
 
   const navItems = [
     { name: t('nav.about'), link: "#about" },
@@ -24,6 +27,24 @@ const Navbar = () => {
     setMenu(false);
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show navbar when scrolled past 80% of viewport height
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollPosition > windowHeight * 0.8) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+        setMenu(false); // Close mobile menu when returning to hero
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-auto max-w-6xl">
       <Button
@@ -31,21 +52,30 @@ const Navbar = () => {
         borderRadius="1rem"
         className="w-full"
       >
+        <AnimatePresence>
+          {showNavbar && (
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -100, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="hidden md:flex items-center gap-4">
+              <ul className="flex justify-center items-center">
+                {navItems.map((item, index) => (
+                  <li key={index} className="flex-1">
+                    <a
+                      href={item.link}
+                      className="block px-6 lg:px-10 py-3 text-white hover:text-purple-primary transition-colors duration-300 border-r-2 last:border-none border-gray-300 text-sm lg:text-base font-medium text-center"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-4">
-          <ul className="flex justify-center items-center">
-            {navItems.map((item, index) => (
-              <li key={index} className="flex-1">
-                <a
-                  href={item.link}
-                  className="block px-6 lg:px-10 py-3 text-white hover:text-purple-primary transition-colors duration-300 border-r-2 last:border-none border-gray-300 text-sm lg:text-base font-medium text-center"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
 
         {/* Mobile Menu */}
         <div className="md:hidden">
