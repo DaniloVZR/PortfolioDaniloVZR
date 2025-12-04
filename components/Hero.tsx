@@ -1,10 +1,9 @@
 "use client";
 import { BackgroundBeams } from "./ui/BackgroundBeams";
-import { RiArrowDownLine, RiGithubFill, RiLinkedinFill } from "react-icons/ri";
+import { RiArrowDownLine, RiGithubFill, RiLinkedinFill, RiDownloadLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import Image from "next/image";
 
 const Hero = () => {
   const { t, language } = useLanguage();
@@ -105,6 +104,16 @@ const Hero = () => {
                   className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-[#b936c0] text-white font-semibold rounded-lg hover:bg-[#b936c0] transition-all hover:scale-105 text-sm sm:text-base"
                 >
                   {t('hero.getInTouch')}
+                </a>
+
+                {/* CV Download Button */}
+                <a
+                  href={language === 'es' ? '/CV_ES.pdf' : '/CV_EN.pdf'}
+                  download={language === 'es' ? 'CV_Danilo_Urrego_ES.pdf' : 'CV_Danilo_Urrego_EN.pdf'}
+                  className="flex items-center justify-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-[#3262ffba] text-white font-semibold rounded-lg hover:bg- transition-all hover:scale-105 text-sm sm:text-base"
+                >
+                  <RiDownloadLine className="w-5 h-5" />
+                  {t('hero.downloadCV')}
                 </a>
               </motion.div>
 

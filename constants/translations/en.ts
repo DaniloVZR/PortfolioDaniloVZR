@@ -17,6 +17,7 @@ export const en = {
     description: "Passionate about creating amazing web experiences with modern technologies. Let's build something great together!",
     viewWork: "View My Work",
     getInTouch: "Get In Touch",
+    downloadCV: "Download CV",
     scrollDown: "Scroll Down"
   },
   about: {
@@ -95,25 +96,46 @@ export const en = {
     viewWebsite: "View Website",
     items: [
       {
+        id: "7",
+        title: "Graduate Platform - Backend",
+        desc: [
+          'This was a web project (backend) for the FIPA 2025-2 fair at IU Pascual Bravo in Medellín, Colombia.',
+          'RESTful API and WebSocket server for the social network of graduates from Institución Universitaria Pascual Bravo, integrated with the frontend project. Handles authentication, user management, posts, real-time messaging, and image management with Cloudinary.'
+        ],
+        stack: ["NodeJS", "ExpressJS", "Javascript", "MongoDB", "Mongoose", "Socket.IO", "JWT", "Bcrypt", "Cloudinary", "SendGrid"]
+      },
+      {
+        id: "8",
+        title: "Academic Projects Evaluation Platform",
+        desc: [
+          'This was a web project for the FIPA 2025-1 fair at IU Pascual Bravo in Medellín, Colombia.',
+          'This website consists of a platform where university students can add a project to a fair-style event where these projects are showcased. Projects can be evaluated by judges assigned by the platform administrators. Administrators can also manage events and platform users.'
+        ],
+        stack: ["Laravel", "NodeJS", "Javascript", "PostgreSQL", "PHP", "TailwindCSS", "Eloquent ORM", "Blade", "Laravel/Breeze"]
+      },
+      {
+        id: "9",
+        title: "Tidal Warfare",
+        desc: [
+          'This was a final project for the object-oriented programming course at IU Pascual Bravo.',
+          'This project is a 2D video game where two players can engage in combat using their ships, collect items that can increase their health. The objective is to destroy the opponent\'s ship.'
+        ],
+        stack: ["C#", "SQL Server"]
+      },
+      {
+        id: "6",
+        title: "Graduate Platform - Frontend",
+        desc: [
+          'This was a web project (frontend) for the FIPA 2025-2 fair at IU Pascual Bravo in Medellín, Colombia.',
+          'The web platform allows graduates to register, log in, and manage their profile. They can update their personal information and make posts on the platform, as well as chat with other platform users. The interface is intuitive and easy to use.'
+        ],
+        stack: ["React", "Typescript", "Vite", "React Router", "Zustand", "Socket.IO Client", "CSS Modules"]
+      },
+      {
         id: "1",
         title: "Fademet",
         desc: "Landing Page for Fademet, a metalworking company in Medellín. The website features various animations, gallery, and contact form.",
         stack: ["React", "Javascript", "Module CSS", "Aos", "EmailJS", "SwiperJS", "Vite"]
-      },
-      {
-        id: "2",
-        title: "Expense Planner",
-        desc: [
-          'Expense planning web application with local storage, with features such as defining a budget and viewing data such as available money and total money spent; in addition to being able to add and filter expenses, as well as edit or delete them.',
-          'Credits: This project was developed as part of the React course taught by Juan de la Torre on Udemy. I have made additional modifications to customize and improve the project.'
-        ],
-        stack: ["React", "Javascript", "CSS", "Vite"]
-      },
-      {
-        id: "3",
-        title: "Encryptor",
-        desc: "Web application with the functionality to encrypt or decrypt a text message according to the type of encryption that is ordered. It should be noted that this was a small project for the university.",
-        stack: ["React", "Javascript", "CSS", "Vite"]
       },
       {
         id: "4",
@@ -132,6 +154,21 @@ export const en = {
           'Credits: This project was developed as part of the React course taught by Juan de la Torre on Udemy. I have made additional modifications to customize and improve the project.'
         ],
         stack: ["React", "NextJS", "Javascript", "Typescript", "TailwindCSS", "SWR", "Prisma", "UseContext", "NodeJS"]
+      },
+      {
+        id: "2",
+        title: "Expense Planner",
+        desc: [
+          'Expense planning web application with local storage, with features such as defining a budget and viewing data such as available money and total money spent; in addition to being able to add and filter expenses, as well as edit or delete them.',
+          'Credits: This project was developed as part of the React course taught by Juan de la Torre on Udemy. I have made additional modifications to customize and improve the project.'
+        ],
+        stack: ["React", "Javascript", "CSS", "Vite"]
+      },
+      {
+        id: "3",
+        title: "Encryptor",
+        desc: "Web application with the functionality to encrypt or decrypt a text message according to the type of encryption that is ordered. It should be noted that this was a small project for the university.",
+        stack: ["React", "Javascript", "CSS", "Vite"]
       }
     ]
   },
