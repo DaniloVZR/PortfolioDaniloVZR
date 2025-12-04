@@ -1,5 +1,6 @@
 export const es = {
   nav: {
+    home: "Inicio",
     about: "Sobre mí",
     experience: "Experiencia",
     projects: "Proyectos",
@@ -9,12 +10,12 @@ export const es = {
   hero: {
     welcome: "Bienvenido a mi portafolio",
     roles: [
-      "Desarrollador Frontend",
-      "Especialista en React",
-      "Entusiasta UI/UX",
-      "Desarrollador Web"
+      "Tecnológo en Desarrollo de Software",
+      "Desarrollador Web",
+      "Transformando Ideas en Interfaces",
+      "Creando Experiencias Digitales"
     ],
-    description: "Apasionado por crear experiencias web increíbles con tecnologías modernas. ¡Construyamos algo grandioso juntos!",
+    description: "Apasionado por crear soluciones digitales que generan impacto con tecnologías modernas. Conoce mi enfoque, mis proyectos y mi camino como desarrollador.",
     viewWork: "Ver Mi Trabajo",
     getInTouch: "Contáctame",
     downloadCV: "Descargar CV",
@@ -23,24 +24,24 @@ export const es = {
   about: {
     title: "Sobre",
     me: "Mí",
-    subtitle: "Desarrollador Frontend apasionado buscando crear experiencias web impactantes",
+    subtitle: "Desarrollador de software apasionado buscando crear experiencias impactantes",
     stats: {
       experience: "Año de Experiencia",
-      projects: "Proyectos Completados",
+      projects: "Proyectos Personales y académicos",
       english: "Nivel de Inglés",
       dedication: "Dedicación"
     },
     hello: {
       title: "¡Hola!",
-      description: "Soy un Desarrollador Web Frontend apasionado y comprometido buscando mi primer empleo como desarrollador. Actualmente enfocado en mi formación a través del bootcamp de programación SoyHenry, orientado al desarrollo web."
+      description: "Soy un Desarrollador de Software en crecimiento, con formación como tecnólogo y experiencia construyendo proyectos personales, académicos y reales. Actualmente me encuentro en sexto semestre de la tecnología de desarrollo de software, donde desarrollo aplicaciones fullstack con tecnologías modernas. Me apasiona crear soluciones digitales que aporten valor y estoy buscando mi primera oportunidad profesional para seguir aprendiendo y aportar al máximo."
     },
-    experience: {
-      title: "Experiencia",
-      description: "Un año de experiencia en el sector TI como Auxiliar de Sistemas, lo que me ha proporcionado una sólida base técnica. Título profesional en Programación de Sistemas de Información del Politécnico Jaime Isaza Cadavid."
+    abilities: {
+      title: "Habilidades",
+      description: "Manejo tecnologías modernas para el desarrollo frontend y backend, incluyendo JavaScript, React, Node.js y bases de datos SQL/NoSQL, o incluso cualquier tecnología que sea requerida. Me adapto rápidamente a nuevos entornos, trabajo bien en equipo y tengo una base sólida en algoritmos, estructuras de datos y buenas prácticas de desarrollo."
     },
     certifications: {
       title: "Certificaciones",
-      description: "Certificado de inglés B2 con 600 horas de estudio en Comfama, demostrando fuertes habilidades de comunicación en entornos internacionales."
+      description: "Cuento con certificación de inglés B2 tras 600 horas de formación, lo que me permite comunicarme efectivamente en entornos globales. Además, he completado cursos y prácticas enfocadas en desarrollo fullstack, resolución de problemas y trabajo colaborativo."
     },
     highlights: {
       cleanCode: {

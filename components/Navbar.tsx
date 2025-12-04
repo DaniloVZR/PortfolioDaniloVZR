@@ -13,6 +13,7 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const navItems = [
+    { name: t('nav.home'), link: "#home" },
     { name: t('nav.about'), link: "#about" },
     { name: t('nav.experience'), link: "#experience" },
     { name: t('nav.projects'), link: "#projects" },

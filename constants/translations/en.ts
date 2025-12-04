@@ -1,5 +1,6 @@
 export const en = {
   nav: {
+    home: "Home",
     about: "About",
     experience: "Experience",
     projects: "Projects",
@@ -9,12 +10,12 @@ export const en = {
   hero: {
     welcome: "Welcome to my portfolio",
     roles: [
-      "Frontend Developer",
-      "React Specialist",
-      "UI/UX Enthusiast",
-      "Web Developer"
+      "Software Development Technologist",
+      "Web Developer",
+      "Transforming Ideas into Interfaces",
+      "Creating Digital Experiences"
     ],
-    description: "Passionate about creating amazing web experiences with modern technologies. Let's build something great together!",
+    description: "Passionate about creating impactful digital solutions with modern technologies. Learn about my approach, my projects, and my journey as a developer.",
     viewWork: "View My Work",
     getInTouch: "Get In Touch",
     downloadCV: "Download CV",
@@ -23,24 +24,24 @@ export const en = {
   about: {
     title: "About",
     me: "Me",
-    subtitle: "Passionate Frontend Developer seeking to create impactful web experiences",
+    subtitle: "Passionate software developer seeking to create impactful experiences",
     stats: {
       experience: "Year Experience",
-      projects: "Projects Completed",
+      projects: "Personal and academic projects",
       english: "English Level",
       dedication: "Dedication"
     },
     hello: {
       title: "Hello there!",
-      description: "I am a passionate and committed Frontend Web Developer seeking my first job as a developer. Currently focused on training through the SoyHenry programming bootcamp, oriented towards web development."
+      description: "I am a rising Software Developer with a background in technology and experience building personal, academic, and real-world projects. I am currently in my sixth semester of a software development technology program, where I develop full-stack applications using modern technologies. I am passionate about creating digital solutions that deliver value and am seeking my first professional opportunity to continue learning and contribute to the best of my ability."
     },
-    experience: {
-      title: "Experience",
-      description: "One year of experience in the IT sector as a Systems Assistant, which has provided me with a solid technical foundation. Professional degree in Information Systems Programming from Politécnico Jaime Isaza Cadavid."
+    abilities: {
+      title: "Abilities",
+      description: "I am proficient in modern frontend and backend development technologies, including JavaScript, React, Node.js, and SQL/NoSQL databases, or any other technology required. I adapt quickly to new environments, work well in teams, and have a solid foundation in algorithms, data structures, and best development practices."
     },
     certifications: {
       title: "Certifications",
-      description: "B2 English certificate with 600 hours of study at Comfama, demonstrating strong communication skills in international environments."
+      description: "I hold a B2 level English certification after 600 hours of training, enabling me to communicate effectively in global environments. In addition, I have completed courses and internships focused on full-stack development, problem-solving, and collaborative work."
     },
     highlights: {
       cleanCode: {

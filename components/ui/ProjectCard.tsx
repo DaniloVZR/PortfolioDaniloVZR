@@ -57,6 +57,7 @@ const ProjectCard = ({
           <a href={gitLink} target="_blank" className="flex-grow">
             <AceternityButton
               className="w-full"
+              classNameText=" justify-between"
               text={t('projects.viewCode')}
               icon={<RiGithubFill size="2rem" />}
             />
@@ -66,6 +67,7 @@ const ProjectCard = ({
               <a href={link} target="_blank" className="flex-grow">
                 <AceternityButton
                   className="w-full"
+                  classNameText="justify-between"
                   text={t('projects.viewWebsite')}
                   icon={<RiLinksFill size="2rem" />}
                 />

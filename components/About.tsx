@@ -73,10 +73,11 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-primary border border-slate-800 rounded-xl p-6 text-center hover:border-purple-primary transition-all hover:scale-105"
+              className="relative bg-gray-primary border border-slate-800 rounded-xl p-6 text-center hover:border-purple-primary transition-all hover:scale-105"
             >
-              <h3 className="text-4xl font-bold text-purple-primary mb-2">{stat.number}</h3>
-              <p className="text-gray-400 text-sm">{stat.label}</p>
+              <div className="absolute left-[50%] -translate-x-1/2 top-[20%] w-12 h-12 bg-blue-700 rounded-3xl backdrop-blur-3xl blur-xl" />
+              <h3 className="text-4xl font-bold mb-2 text-white relative z-10">{stat.number}</h3>
+              <p className="text-gray-400 text-sm relative z-10">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -104,11 +105,11 @@ const About = () => {
 
               <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                  <span className="text-3xl">💼</span>
-                  {t('about.experience.title')}
+                  <span className="text-3xl">🌀</span>
+                  {t('about.abilities.title')}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  {t('about.experience.description')}
+                  {t('about.abilities.description')}
                 </p>
               </div>
 

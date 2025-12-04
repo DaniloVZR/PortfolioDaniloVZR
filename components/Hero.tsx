@@ -1,9 +1,11 @@
 "use client";
 import { BackgroundBeams } from "./ui/BackgroundBeams";
 import { RiArrowDownLine, RiGithubFill, RiLinkedinFill, RiDownloadLine } from "react-icons/ri";
+import { RiMailLine, RiWhatsappLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import AceternityButton from "./ui/AceternityButton";
 
 const Hero = () => {
   const { t, language } = useLanguage();
@@ -20,7 +22,7 @@ const Hero = () => {
   }, [roles.length, language]);
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden flex items-center">
+    <div id="home" className="relative min-h-screen w-full overflow-hidden flex items-center">
       {/* Background */}
       <div className="absolute h-full w-full top-0 left-0">
         <BackgroundBeams />
@@ -79,7 +81,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="text-gray-300 text-sm sm:text-base md:text-base lg:text-lg mb-5 sm:mb-6 max-w-xl mx-auto lg:mx-0 px-4 sm:px-0"
+                className="text-gray-300 text-sm sm:text-base md:text-base lg:text-lg mt-5 mb-5 md:mt-0 sm:mb-6 max-w-xl mx-auto lg:mx-0 px-4 sm:px-0"
               >
                 {t('hero.description')}
               </motion.p>
@@ -93,7 +95,7 @@ const Hero = () => {
               >
                 <a
                   href="#projects"
-                  className="group relative px-6 sm:px-8 py-2.5 sm:py-3 bg-[#b936c0] text-white font-semibold rounded-lg overflow-hidden transition-all hover:scale-105 text-sm sm:text-base"
+                  className="group relative px-4 py-2.5 sm:py-3 bg-[#b936c0] text-center text-white font-semibold rounded-lg overflow-hidden transition-all hover:scale-105 text-xs sm:text-sm"
                 >
                   <span className="relative z-10">{t('hero.viewWork')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
@@ -101,7 +103,7 @@ const Hero = () => {
 
                 <a
                   href="#contact"
-                  className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-[#b936c0] text-white font-semibold rounded-lg hover:bg-[#b936c0] transition-all hover:scale-105 text-sm sm:text-base"
+                  className="px-4 py-2.5 sm:py-3 border-2 border-[#b936c0] text-white font-semibold rounded-lg hover:bg-[#b936c0] transition-all hover:scale-105 text-xs sm:text-sm"
                 >
                   {t('hero.getInTouch')}
                 </a>
@@ -110,10 +112,13 @@ const Hero = () => {
                 <a
                   href={language === 'es' ? '/CV_ES.pdf' : '/CV_EN.pdf'}
                   download={language === 'es' ? 'CV_Danilo_Urrego_ES.pdf' : 'CV_Danilo_Urrego_EN.pdf'}
-                  className="flex items-center justify-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-[#3262ffba] text-white font-semibold rounded-lg hover:bg- transition-all hover:scale-105 text-sm sm:text-base"
                 >
-                  <RiDownloadLine className="w-5 h-5" />
-                  {t('hero.downloadCV')}
+                  <AceternityButton
+                    text={t('hero.downloadCV')}
+                    icon={<RiDownloadLine className="w-5 h-5" />}
+                    className="flex items-center justify-center gap-2 text-white font-semibold rounded-lg transition-all hover:scale-105 text-xs sm:text-sm w-full"
+                    classNameText="px-4 py-2.5 sm:py-3 w-full  justify-center"
+                  />
                 </a>
               </motion.div>
 
@@ -139,6 +144,21 @@ const Hero = () => {
                   className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
                 >
                   <RiLinkedinFill className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:daniloud2809@gmail.com"
+                  rel="noopener noreferrer"
+                  className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
+                >
+                  <RiMailLine className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://w.app/4mvnxn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
+                >
+                  <RiWhatsappLine className="w-5 h-5" />
                 </a>
               </motion.div>
             </motion.div>

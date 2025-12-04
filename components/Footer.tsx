@@ -2,7 +2,7 @@
 
 import { socialMedia } from "@/constants";
 import AceternityButton from "./ui/AceternityButton";
-import { RiPhoneFill } from "react-icons/ri";
+import { RiMailLine, RiWhatsappLine } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -28,20 +28,33 @@ const Footer = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
               <div className="w-full sm:w-auto">
-                <AceternityButton
-                  text="+57 313 5339222"
-                  icon={<RiPhoneFill className="w-4 h-4 sm:w-5 sm:h-5" />}
-                  reverse={true}
-                  classNameText="text-sm sm:text-base lg:text-lg cursor-default"
-                  className="w-full"
-                />
+                <a href="https://w.app/4mvnxn" target="_blank" rel="noopener noreferrer">
+                  <AceternityButton
+                    text="+57 313 5339222"
+                    icon={<RiWhatsappLine className="w-4 h-4 sm:w-5 sm:h-5" />}
+                    reverse={true}
+                    classNameText="text-sm sm:text-base lg:text-lg justify-center"
+                    className="w-full"
+                  />
+                </a>
+              </div>
+              <div className="w-full sm:w-auto">
+                <a href="mailto:daniloud2809@gmail.com" >
+                  <AceternityButton
+                    text="daniloud2809@gmail.com"
+                    icon={<RiMailLine className="w-4 h-4 sm:w-5 sm:h-5" />}
+                    reverse={true}
+                    classNameText="text-sm sm:text-base lg:text-lg justify-center"
+                    className="w-full"
+                  />
+                </a>
               </div>
               <div className="w-full sm:w-auto">
                 <AceternityButton
                   text="Medellín, Colombia"
                   icon={<FaLocationDot className="w-4 h-4 sm:w-5 sm:h-5" />}
                   reverse={true}
-                  classNameText="text-sm sm:text-base lg:text-lg cursor-default"
+                  classNameText="text-sm sm:text-base lg:text-lg cursor-default justify-center"
                   className="w-full"
                 />
               </div>

@@ -31,7 +31,7 @@ export const techStack = [
       { id: "mysql", name: "MySQL" },
       { id: "postgresql", name: "PostgreSQL" },
       { id: "mongodb", name: "MongoDB" },
-      { id: "microsoftSQLServer", name: "SQL Server" },
+      { id: "SQLServer", name: "SQL Server" },
       { id: "sequelize", name: "Sequelize" }
     ]
   }
