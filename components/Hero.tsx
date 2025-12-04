@@ -28,7 +28,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-10 md:px-30 lg:px-44 py-20 sm:py-24 lg:py-0">
+      <div className="relative z-10 w-full px-10 md:px-30 lg:px-44 py-20 sm:py-25 lg:py-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Text Content */}
@@ -165,7 +165,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, repeat: Infinity, repeatType: "reverse", duration: 1.5 }}
-        className="hidden sm:flex absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="hidden sm:flex absolute bottom-6 sm:bottom-8 z-10 justify-center w-full"
       >
         <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
           <span className="text-xs sm:text-sm mb-2">{t('hero.scrollDown')}</span>

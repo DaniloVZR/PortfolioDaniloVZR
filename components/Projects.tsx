@@ -1,15 +1,25 @@
 "use client";
-import { projects } from "@/constants";
+import { projectsData } from "@/constants";
 import ProjectCard from "./ui/ProjectCard";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import Loader from "./ui/Loader";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ProjectData, TranslatedProject } from "@/types";
+
+interface Project extends ProjectData, TranslatedProject { }
 
 const Projects = () => {
   const { t } = useLanguage();
   const [hovered, setHovered] = useState<string | null>(null);
   const [itemOffset, setItemOffset] = useState(0);
+
+  const translatedProjects = t('projects.items') as unknown as TranslatedProject[];
+
+  const projects: Project[] = projectsData.map((project, index) => ({
+    ...project,
+    ...translatedProjects[index]
+  }));
 
   const itemsPerPage = 3;
   const endOffset = itemOffset + itemsPerPage;
@@ -32,7 +42,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 border-t-2 border-slate-800">
       <h1 className="heading tracking-normal p-10">
-        {t('projects.title')}
+        {t('projects.title') as string}
       </h1>
       <div className="my-10">
         <ReactPaginate
@@ -67,7 +77,8 @@ const Projects = () => {
                   />
                 </div>
               ))
-            ) : <Loader />}
+            ) : <Loader />
+          }
         </div>
       </div>
     </section>

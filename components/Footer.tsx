@@ -32,7 +32,7 @@ const Footer = () => {
                   text="+57 313 5339222"
                   icon={<RiPhoneFill className="w-4 h-4 sm:w-5 sm:h-5" />}
                   reverse={true}
-                  classNameText="text-sm sm:text-base lg:text-lg"
+                  classNameText="text-sm sm:text-base lg:text-lg cursor-default"
                   className="w-full"
                 />
               </div>
@@ -41,7 +41,7 @@ const Footer = () => {
                   text="Medellín, Colombia"
                   icon={<FaLocationDot className="w-4 h-4 sm:w-5 sm:h-5" />}
                   reverse={true}
-                  classNameText="text-sm sm:text-base lg:text-lg"
+                  classNameText="text-sm sm:text-base lg:text-lg cursor-default"
                   className="w-full"
                 />
               </div>
