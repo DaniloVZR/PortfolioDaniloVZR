@@ -1,3 +1,4 @@
+// components/ui/ProjectCard.tsx - Versión optimizada
 import Image from "next/image";
 import { RiGithubFill, RiLinksFill } from "react-icons/ri";
 import AceternityButton from "./AceternityButton";
@@ -23,14 +24,15 @@ const ProjectCard = ({
 
   return (
     <div className="flex flex-col xl:flex-row xl:gap-8">
-      <div className="flex-shrink-0 mb-4 xl:mb-0 xl:mr-4 xl:w-1/2">
+      <div className="flex-shrink-0 mb-4 xl:mb-0 xl:mr-4 xl:w-1/2 relative h-[300px] xl:h-[400px]">
         <Image
           src={image}
-          width={1000}
-          height={1000}
+          fill
           alt={title}
-          className="rounded-lg object-cover h-auto w-full"
-          priority
+          sizes="(max-width: 1280px) 100vw, 50vw"
+          className="rounded-lg object-cover"
+          loading="lazy"
+          quality={75}
         />
       </div>
       <div className="flex flex-col justify-between xl:w-1/2">
@@ -54,7 +56,7 @@ const ProjectCard = ({
           </ul>
         </div>
         <div className="flex gap-2 mt-4">
-          <a href={gitLink} target="_blank" className="flex-grow">
+          <a href={gitLink} target="_blank" rel="noopener noreferrer" className="flex-grow">
             <AceternityButton
               className="w-full"
               classNameText=" justify-between"
@@ -64,7 +66,7 @@ const ProjectCard = ({
           </a>
           {
             link && (
-              <a href={link} target="_blank" className="flex-grow">
+              <a href={link} target="_blank" rel="noopener noreferrer" className="flex-grow">
                 <AceternityButton
                   className="w-full"
                   classNameText="justify-between"

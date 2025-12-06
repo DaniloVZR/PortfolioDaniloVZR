@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AceternityButton from "./ui/AceternityButton";
+import Image from "next/image";
 
 const Hero = () => {
   const { t, language } = useLanguage();
@@ -23,16 +24,13 @@ const Hero = () => {
 
   return (
     <div id="home" className="relative min-h-screen w-full overflow-hidden flex items-center">
-      {/* Background */}
       <div className="absolute h-full w-full top-0 left-0">
         <BackgroundBeams />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 w-full px-10 md:px-30 lg:px-44 py-20 sm:py-25 lg:py-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left Side - Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -178,10 +176,13 @@ const Hero = () => {
                 {/* Profile Picture */}
                 <div className="relative w-full aspect-square">
                   <div className="absolute inset-0 rounded-full border-2 sm:border-4 border-[#b936c0] animate-spin-slow"></div>
-                  <img
+                  <Image
+                    priority
+                    fill
                     src="/Profile-Picture.png"
                     alt="Danilo Urrego David"
                     className="md:max-w-300 w-full h-full rounded-full object-cover p-1 sm:p-2"
+                    sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, (max-width: 1024px) 230px, (max-width: 1280px) 250px, (max-width: 1536px) 350px, 450px"
                   />
                 </div>
               </div>

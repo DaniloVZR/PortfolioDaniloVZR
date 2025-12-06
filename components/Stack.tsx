@@ -28,13 +28,14 @@ const Stack = () => {
                       className="flex flex-col h-max gap-2 sm:gap-3 justify-normal items-center group"
                       key={item.id}
                     >
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center transition-transform group-hover:scale-110">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center transition-transform group-hover:scale-110 relative">
                         <Image
-                          className="w-full h-full object-contain"
-                          src={`TechStack/${item.id}-icon.svg`}
+                          src={`/TechStack/${item.id}-icon.svg`}
                           alt={item.id}
-                          width={300}
-                          height={300}
+                          fill
+                          sizes="56px"
+                          className="object-contain"
+                          loading="lazy"
                         />
                       </div>
                       <span className="text-xs sm:text-sm bg-gray-primary py-1 px-2 sm:px-3 rounded-full whitespace-nowrap group-hover:bg-purple-primary/20 transition-colors">

@@ -1,11 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { RiCodeSSlashLine, RiLightbulbFlashLine, RiTeamLine, RiRocketLine } from "react-icons/ri";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useRef } from "react";
 
 const About = () => {
 
   const { t } = useLanguage();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
     { number: "1+", label: t('about.stats.experience') },
@@ -38,17 +41,19 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 border-t-2 border-slate-800 relative">
+    <section id="about" className="py-20 border-t-2 border-slate-800 relative" ref={ref}>
       {/* Background Effects */}
       <div className="absolute z-0 left-[-20%] top-0 w-[40%] h-[60%] rounded-full purple__gradient" />
       <div className="absolute z-0 right-[-20%] bottom-0 w-[40%] h-[60%] rounded-full blue__gradient" />
 
       <div className="relative z-10">
+        {/* Header con fade simple */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          style={{
+            opacity: isInView ? 1 : 0,
+            transform: isInView ? "translateY(0)" : "translateY(30px)",
+            transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1)"
+          }}
         >
           <h1 className="heading tracking-normal w-auto px-10 pb-6">
             {t('about.title')} <span className="text-purple-primary">{t('about.me')}</span>
@@ -58,21 +63,16 @@ const About = () => {
           </p>
         </motion.div>
 
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-4 mb-20"
-        >
+        {/* Stats Section - Animación de escala suave */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-4 mb-20">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              style={{
+                opacity: isInView ? 1 : 0,
+                transform: isInView ? "scale(1)" : "scale(0.8)",
+                transition: `all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.1}s`
+              }}
               className="relative bg-gray-primary border border-slate-800 rounded-xl p-6 text-center hover:border-purple-primary transition-all hover:scale-105"
             >
               <div className="absolute left-[50%] -translate-x-1/2 top-[20%] w-12 h-12 bg-blue-700 rounded-3xl backdrop-blur-3xl blur-xl" />
@@ -80,20 +80,21 @@ const About = () => {
               <p className="text-gray-400 text-sm relative z-10">{stat.label}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Main Content Grid */}
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-            {/* Left Column - Story */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
+            {/* Left Column - Slide from left */}
+            <div className="space-y-6">
+              <motion.div
+                style={{
+                  opacity: isInView ? 1 : 0,
+                  transform: isInView ? "translateX(0)" : "translateX(-50px)",
+                  transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
+                }}
+                className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all"
+              >
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <span className="text-3xl">👋</span>
                   {t('about.hello.title')}
@@ -101,9 +102,16 @@ const About = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {t('about.hello.description')}
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
+              <motion.div
+                style={{
+                  opacity: isInView ? 1 : 0,
+                  transform: isInView ? "translateX(0)" : "translateX(-50px)",
+                  transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
+                }}
+                className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all"
+              >
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <span className="text-3xl">🌀</span>
                   {t('about.abilities.title')}
@@ -111,9 +119,16 @@ const About = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {t('about.abilities.description')}
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all">
+              <motion.div
+                style={{
+                  opacity: isInView ? 1 : 0,
+                  transform: isInView ? "translateX(0)" : "translateX(-50px)",
+                  transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"
+                }}
+                className="bg-gray-primary border border-slate-800 rounded-xl p-8 hover:border-purple-primary transition-all"
+              >
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                   <span className="text-3xl">🌟</span>
                   {t('about.certifications.title')}
@@ -121,24 +136,19 @@ const About = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {t('about.certifications.description')}
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
-            {/* Right Column - Highlights */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
+            {/* Right Column - Slide from right con rotación sutil */}
+            <div className="space-y-6">
               {highlights.map((highlight, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  style={{
+                    opacity: isInView ? 1 : 0,
+                    transform: isInView ? "translateX(0) rotateY(0deg)" : "translateX(50px) rotateY(10deg)",
+                    transition: `all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) ${0.2 + index * 0.1}s`
+                  }}
                   className="bg-gray-primary border border-slate-800 rounded-xl p-6 hover:border-purple-primary transition-all group"
                 >
                   <div className="flex items-start gap-4">
@@ -153,12 +163,13 @@ const About = () => {
                 </motion.div>
               ))}
 
-              {/* CTA Card */}
+              {/* CTA Card con efecto de bounce */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
+                style={{
+                  opacity: isInView ? 1 : 0,
+                  transform: isInView ? "scale(1)" : "scale(0.9)",
+                  transition: "all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s"
+                }}
                 className="bg-gradient-to-br from-purple-primary to-pink-600 rounded-xl p-8 text-center"
               >
                 <h3 className="text-2xl font-bold mb-3">{t('about.cta.title')}</h3>
@@ -172,7 +183,7 @@ const About = () => {
                   {t('about.cta.button')}
                 </a>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
