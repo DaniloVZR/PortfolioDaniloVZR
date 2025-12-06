@@ -147,6 +147,7 @@ const Hero = () => {
                 </a>
                 <a
                   href="mailto:daniloud2809@gmail.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
                 >

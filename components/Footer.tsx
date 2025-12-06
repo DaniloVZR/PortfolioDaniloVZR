@@ -39,7 +39,11 @@ const Footer = () => {
                 </a>
               </div>
               <div className="w-full sm:w-auto">
-                <a href="mailto:daniloud2809@gmail.com" >
+                <a
+                  href="mailto:daniloud2809@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <AceternityButton
                     text="daniloud2809@gmail.com"
                     icon={<RiMailLine className="w-4 h-4 sm:w-5 sm:h-5" />}

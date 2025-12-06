@@ -71,7 +71,7 @@ const Navbar = () => {
                       <li key={index} className="flex-1">
                         <a
                           href={item.link}
-                          className="block px-6 lg:px-10 py-3 text-white hover:text-purple-primary transition-colors duration-300 border-r-2 last:border-none border-gray-300 text-sm lg:text-base font-medium text-center"
+                          className="whitespace-nowrap block px-6 lg:px-10 py-3 text-white hover:text-purple-primary transition-colors duration-300 border-r-2 last:border-none border-gray-300 text-sm lg:text-base font-medium text-center"
                         >
                           {item.name}
                         </a>
@@ -88,7 +88,7 @@ const Navbar = () => {
       {/* Desktop Menu */}
 
       {/* Mobile Menu */}
-      <nav className="fixed top-3 sm:top-5 z-50 w-[95%] sm:w-auto max-w-6xl md:invisible">
+      <nav className="fixed top-3 sm:top-5 z-50 w-[95%] max-w-6xl md:invisible">
         <Button
           duration={4000}
           borderRadius="1rem"
