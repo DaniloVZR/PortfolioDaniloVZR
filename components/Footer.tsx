@@ -28,15 +28,13 @@ const Footer = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
               <div className="w-full sm:w-auto">
-                <a href="https://w.app/4mvnxn" target="_blank" rel="noopener noreferrer">
-                  <AceternityButton
-                    text="+57 313 5339222"
-                    icon={<RiWhatsappLine className="w-4 h-4 sm:w-5 sm:h-5" />}
-                    reverse={true}
-                    classNameText="text-sm sm:text-base lg:text-lg justify-center"
-                    className="w-full"
-                  />
-                </a>
+                <AceternityButton
+                  text="+57 313 5339222"
+                  icon={<RiWhatsappLine className="w-4 h-4 sm:w-5 sm:h-5" />}
+                  reverse={true}
+                  classNameText="text-sm sm:text-base lg:text-lg justify-center"
+                  className="w-full"
+                />
               </div>
               <div className="w-full sm:w-auto">
                 <a

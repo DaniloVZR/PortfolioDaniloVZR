@@ -151,14 +151,14 @@ const Hero = () => {
                 >
                   <RiMailLine className="w-5 h-5" />
                 </a>
-                <a
+                {/* <a
                   href="https://w.app/4mvnxn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 sm:p-3 rounded-full bg-slate-800 hover:bg-[#b936c0] transition-all hover:scale-110"
                 >
                   <RiWhatsappLine className="w-5 h-5" />
-                </a>
+                </a> */}
               </motion.div>
             </motion.div>
 
