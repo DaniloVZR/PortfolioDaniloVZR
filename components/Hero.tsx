@@ -108,8 +108,8 @@ const Hero = () => {
 
                 {/* CV Download Button */}
                 <a
-                  href={language === 'es' ? '/CV_ES.pdf' : '/CV_EN.pdf'}
-                  download={language === 'es' ? 'CV_Danilo_Urrego_ES.pdf' : 'CV_Danilo_Urrego_EN.pdf'}
+                  href={language === 'es' ? '/CV_ES.pdf' : '/CV_ES.pdf'}
+                  download={language === 'es' ? 'CV_Danilo_Urrego.pdf' : 'CV_Danilo_Urrego.pdf'}
                 >
                   <AceternityButton
                     text={t('hero.downloadCV')}
